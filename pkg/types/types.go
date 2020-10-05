@@ -15,13 +15,13 @@ const (
 type PAN string
 
 type Card struct {
-	ID         int
-	PAN        PAN
-	Balance    Money
-	Currency   Currency
-	Color      string
-	Name       string
-	Active     bool
+	ID       int
+	PAN      PAN
+	Balance  Money
+	Currency Currency
+	Color    string
+	Name     string
+	Active   bool
 }
 
 type PaymentSource struct {
@@ -38,8 +38,8 @@ type Status string
 
 // Переопределенные статусы платежей.
 const (
-	StatusOk Status = "OK"
-	StatusFail Status = "FAIL"
+	StatusOk         Status = "OK"
+	StatusFail       Status = "FAIL"
 	StatusInProgress Status = "INPROGRESS"
 )
 
@@ -49,4 +49,12 @@ type Payment struct {
 	Amount   Money
 	Category Category
 	Status   Status
+}
+
+type Phone string
+
+type Account struct {
+	ID      int64
+	Phone   Phone
+	Balance Money
 }
